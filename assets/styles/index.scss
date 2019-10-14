@@ -1,1 +1,57 @@
 @import '~bootstrap/scss/bootstrap';
+
+.upperBar {
+  // border: 1px dotted black;
+  height: 50px;
+  background-color: rgba(180, 159, 142, .8);
+}
+
+.signUp {
+  position: relative;
+  // border: 1px solid black;
+  height: 90%;
+  width: 7%;
+  left: 13px;
+  bottom: -3px;
+}
+
+.signIn {
+  position: relative;
+  // border: 1px solid black;
+  height: 90%;
+  width: 8%;
+  left: 101px;
+
+  bottom: 42px;
+}
+
+.changePassword {
+  position: relative;
+  // border: 1px solid black;
+  height: 85%;
+  width: 13%;
+  left: 940px;
+  bottom: 87px;
+}
+
+.signOut {
+  position: relative;
+  // border: 1px solid black;
+  height: 85%;
+  width: 10%;
+  left: 1110px;
+  bottom: 129px;
+}
+
+p {
+  position: relative;
+  bottom: 0px;
+  left: 20px;
+  bottom: -10px;
+  color: white;
+
+}
+
+body {
+  background-color: rgba(0, 0, 0, .5)
+}
