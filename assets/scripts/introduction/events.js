@@ -3,7 +3,8 @@ import $ from 'jquery'
 const onClickFirst = function () {
   $('.message-container').hide()
   $('.upper-bar').show()
-  console.log('hello')
+  $('.change-password').hide()
+  $('.sign-out').hide()
 }
 
 const addIntroHandlers = function () {

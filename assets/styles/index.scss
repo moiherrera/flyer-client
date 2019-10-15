@@ -33,19 +33,27 @@ body {
 .change-password {
   position: relative;
   // border: 1px solid black;
-  height: 85%;
-  width: 13%;
-  left: 940px;
-  bottom: 87px;
+  // height: 85%;
+  // width: 13%;
+  // left: 940px;
+  // bottom: 0px;
+  display: inline-block;
+  margin-left: auto;
+  left: 900px;
+
 }
 
 .sign-out {
   position: relative;
   // border: 1px solid black;
-  height: 85%;
-  width: 10%;
-  left: 1110px;
-  bottom: 129px;
+  // height: 85%;
+  // width: 10%;
+  // left: 1110px;
+  // bottom: 0px;
+  display: inline-block;
+  margin-right: auto;
+  left: 1000px;
+  bottom: -5px;
 }
 
 .message-container {
@@ -90,4 +98,9 @@ p {
 
 .next {
   color: white;
+}
+
+#sign-out {
+  position: relative;
+  bottom: -5px;
 }
