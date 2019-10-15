@@ -1,12 +1,17 @@
 @import '~bootstrap/scss/bootstrap';
 
-.upperBar {
+
+body {
+  background-color: rgba(0, 0, 0, .5)
+}
+
+.upper-bar {
   // border: 1px dotted black;
   height: 50px;
   background-color: rgba(180, 159, 142, .8);
 }
 
-.signUp {
+.sign-up {
   position: relative;
   // border: 1px solid black;
   height: 90%;
@@ -15,7 +20,7 @@
   bottom: -3px;
 }
 
-.signIn {
+.sign-in {
   position: relative;
   // border: 1px solid black;
   height: 90%;
@@ -25,7 +30,7 @@
   bottom: 42px;
 }
 
-.changePassword {
+.change-password {
   position: relative;
   // border: 1px solid black;
   height: 85%;
@@ -34,7 +39,7 @@
   bottom: 87px;
 }
 
-.signOut {
+.sign-out {
   position: relative;
   // border: 1px solid black;
   height: 85%;
@@ -43,15 +48,46 @@
   bottom: 129px;
 }
 
+.message-container {
+  background-color: rgba(180, 159, 142, .8);
+  position: relative;
+  // border: 1px solid black;
+  width: 21%;
+  height: 200px;
+  left: 500px;
+  text-align: center;
+  word-wrap: break-word;
+  bottom: -150px;
+  justify-content:center;
+
+}
+
 p {
   position: relative;
   bottom: 0px;
   left: 20px;
   bottom: -10px;
   color: white;
+}
+
+.message-container > p {
+  position: relative;
+  // border: 1px solid black;
+  word-wrap: break-word;
+  width: 250px;
+  left: 0px;
 
 }
 
-body {
-  background-color: rgba(0, 0, 0, .5)
+.first-message {
+  position: relative;
+  bottom: 0px;
+  width: 290px;
+  // border: 1px solid black;
+  text-align: justify;
+
+}
+
+.next {
+  color: white;
 }

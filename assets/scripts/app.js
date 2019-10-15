@@ -5,9 +5,11 @@
 
 // use require without a reference to ensure a file is bundled
 // require('./example')
+const introEvents = require('./introduction/events')
 
 $(() => {
-  // your JS code goes here
-  $('.upperBar').hide()
-
+  $('.upper-bar').hide()
+  $('.third-message').hide()
+  $('.second-message').hide()
+  introEvents.addIntroHandlers()
 })
