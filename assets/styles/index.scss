@@ -7,6 +7,8 @@ body {
 
 .upper-bar {
   // border: 1px dotted black;
+  position: fixed;
+  width:100vw;
   height: 50px;
   background-color: rgba(180, 159, 142, .8);
 }
@@ -36,15 +38,16 @@ body {
   display: inline-block;
   margin-left: auto;
   left: 220px;
-  bottom: 607px;
   width: 300px;
-  height: 45px;
+  height: 35px;
+  color: white;
+  bottom: 610px;
 
 }
 
 
 .upload-flyer {
-  position: fixed;
+  position: relative;
   // border: 1px solid black;
   // height: 85%;
   width: 120px;
@@ -52,33 +55,43 @@ body {
   // bottom: 0px;
   display: inline-block;
   margin-left: auto;
-  left: 715px;
-  bottom: 610px;
+  left: 500px;
 
 }
+
+.all-flyers {
+  padding: 0px;
+  width: 100vw;
+  text-align: center;
+}
+
+.flyerImages {
+  position: relative;
+  display: inline-block;
+  margin: auto;
+
+  width: 60vw;
+  height: 100vh;
+}
+
+img {
+ min-width: 100%;
+ min-height: 100%;
+}
+
 .change-password {
   position: relative;
-  // border: 1px solid black;
-  // height: 85%;
-  // width: 13%;
-  // left: 940px;
-  // bottom: 0px;
   display: inline-block;
   margin-left: auto;
-  left: 900px;
+  left: 510px;
 
 }
 
 .sign-out {
   position: relative;
-  // border: 1px solid black;
-  // height: 85%;
-  // width: 10%;
-  // left: 1110px;
-  // bottom: 0px;
   display: inline-block;
   margin-right: auto;
-  left: 1000px;
+  left: 570px;
   bottom: -5px;
 }
 
