@@ -7,9 +7,11 @@
 // require('./example')
 const introEvents = require('./introduction/events')
 const authEvents = require('./auth/events')
+const flyerEvents = require('./flyer/events')
 
 $(() => {
   $('.upper-bar').hide()
+  flyerEvents.addFlyerHandlers()
   introEvents.addIntroHandlers()
   authEvents.addAuthHandlers()
 })
