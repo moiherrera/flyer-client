@@ -45,9 +45,5 @@ const addAuthHandlers = function () {
 }
 
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onSignOut,
-  onChangePassword,
   addAuthHandlers
 }

@@ -38,6 +38,8 @@ const signOutSuccess = function () {
   $('.sign-in').show()
   $('.upload-flyer').show()
   $('.message-box').text('Successfully Signed Out')
+  $('.all-flyers').hide()
+  $('.upload-flyer').hide()
 }
 
 const changePasswordSuccess = function () {
