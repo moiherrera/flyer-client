@@ -24,12 +24,32 @@ const onIndexSuccess = (data) => {
 }
 
 const onIndexFailure = function () {
-  $('.message-box').text('No profiles to get!')
+  $('.message-box').text('Unable to get flyers.')
+}
+
+const onDestroySuccess = function () {
+  $('.message-box').text('Successfully deleted flyer.')
+}
+
+const onDestroyFailure = function () {
+  $('.message-box').text('Could not delete flyer.')
+}
+
+const onUpdateSuccess = function () {
+  $('.message-box').text('Successfully updated flyer.')
+}
+
+const onUpdateFailure = function () {
+  $('.message-box').text('Could not update flyer.')
 }
 
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onIndexSuccess,
-  onIndexFailure
+  onIndexFailure,
+  onDestroySuccess,
+  onDestroyFailure,
+  onUpdateSuccess,
+  onUpdateFailure
 }

@@ -36,7 +36,7 @@ const create = formData => {
 
 const update = (formData) => {
   return $.ajax({
-    url: config.apiUrl + '/flyers/' + formData.flyer.id,
+    url: config.apiUrl + '/flyers/' + store.flyerid,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

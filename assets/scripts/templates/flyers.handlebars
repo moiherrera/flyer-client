@@ -4,13 +4,7 @@
     <img src="{{flyer.name}}"/>
         {{#if flyer.owner}}
         <button class="delete-flyer btn btn-danger" data-id="{{flyer._id}}">Delete </button>
-        <button class="update-flyer btn" data-id="{{flyer.id}}">Update </button>
-        <form class="update-flyer-form">
-              <h2>Update</h2>
-              <div class='update-flyer' data-id="{{flyer.id}}" value="{{value.id}}">  </div>
-              Name: <input name='flyer[name]' value="{{flyer.name}}" type="text" placeholder="name">
-              <input type="submit" value="Update Flyer">
-          </form>
+        <button class="edit-flyer btn btn-basic" data-id="{{flyer._id}}" data-toggle="modal" data-target="#updateFlyerModal">Update</button>
         {{/if}}
     </div>
     {{/each}}

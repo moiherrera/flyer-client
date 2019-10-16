@@ -1,5 +1,5 @@
 'use strict'
-
+const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../../lib/get-form-fields')
@@ -22,11 +22,16 @@ const onGetFlyers = function (event) {
     .catch(ui.onIndexFailure)
 }
 
+const onStoreFlyerID = function (event) {
+  event.preventDefault()
+  store.flyerid = event.target.getAttribute('data-id')
+  console.log(store.flyerid)
+}
+
 const onUpdateFlyer = function (event) {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
   api.update(formData)
     .then(function (formData) {
       onGetFlyers(event)
@@ -36,13 +41,8 @@ const onUpdateFlyer = function (event) {
 }
 
 const onDestroyFlyer = event => {
-  console.log(event)
   event.preventDefault()
   const id = event.target.getAttribute('data-id')
-  console.log(event.target)
-  const lid = $(event.target).data('id')
-  console.log(lid)
-  console.log('hello')
   api.destroy(id)
     .then(() => {
       ui.onDestroySuccess()
@@ -53,8 +53,9 @@ const onDestroyFlyer = event => {
 
 const addFlyerHandlers = function () {
   $('#upload-flyer').on('submit', onCreateFlyer)
-  $('.all-flyers').on('submit', '.update-flyer-form', onUpdateFlyer)
+  $('#update-flyer').on('submit', onUpdateFlyer)
   $('.all-flyers').on('click', '.delete-flyer', onDestroyFlyer)
+  $('.all-flyers').on('click', '.edit-flyer', onStoreFlyerID)
 }
 
 module.exports = {
@@ -62,5 +63,6 @@ module.exports = {
   onCreateFlyer,
   onGetFlyers,
   onUpdateFlyer,
-  onDestroyFlyer
+  onDestroyFlyer,
+  onStoreFlyerID
 }
