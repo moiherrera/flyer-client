@@ -32,6 +32,13 @@
           <p> Sign In </p>
         </a>
         </div>
+        <div class="message-box">
+        </div>
+        <div class="upload-flyer">
+          <a data-toggle="modal" id="upload-flyer-modal" href="#uploadFlyerModal" class="">
+          <p> Upload Flyer </p>
+          </a>
+        </div>
         <div class="change-password">
           <a data-toggle="modal" id="change-password-modal" href="#changePasswordModal" class="">
           <p> Change Password </p>
@@ -51,6 +58,7 @@
             Greetings! Flyer is a tool to help you find events in your area by collecting flyers from individuals and organization in your locale!   If you'd like to upload a flyer yourself for an event that you are planning, remember to sign up for an account! Otherwise, enjoy!   <span class="next"> &#10093; </span>
           </p>
         </div>
+
       </main>
 
 
@@ -58,9 +66,8 @@
       <div id="signUpModal" class="modal fade">
           <div class="modal-dialog modal-dialog-centered modal-lg">
               <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title"> Sign Up </h5>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <div class="modal-header sign-up-header">
                   </div>
                   <div class="modal-body">
                           <form id='sign-up' class='border'>
@@ -79,9 +86,8 @@
         <div id="signInModal" class="modal fade">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title"> Sign In </h5>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-header sign-in-header">
                     </div>
                     <div class="modal-body">
                       <form id='sign-in' class='border'>
@@ -99,9 +105,8 @@
           <div id="changePasswordModal" class="modal fade">
               <div class="modal-dialog modal-dialog-centered modal-lg">
                   <div class="modal-content">
-                      <div class="modal-header">
-                          <h5 class="modal-title"> Change Password </h5>
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="modal-header change-password-header">
                       </div>
                       <div class="modal-body">
                         <form id='change-password' class='border'>
@@ -116,5 +121,21 @@
                     </div>
                 </div>
             </div>
+            <div id="uploadFlyerModal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-header change-password-header">
+                        </div>
+                        <div class="modal-body">
+                          <form class="form1" action="" id='upload-flyer'>
+                              <label for="name" class="input_name">Flyer Link</label>
+                              <input name= "flyer[name]" id="input_Name" type="text">
+                              <button>Upload Flyer</button>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+              </div>
     </body>
 </html>

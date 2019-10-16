@@ -5,6 +5,7 @@ const onClickFirst = function () {
   $('.upper-bar').show()
   $('.change-password').hide()
   $('.sign-out').hide()
+  $('.upload-flyer').hide()
 }
 
 const addIntroHandlers = function () {

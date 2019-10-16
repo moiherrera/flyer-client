@@ -30,6 +30,32 @@ body {
   bottom: 42px;
 }
 
+.message-box {
+  position: fixed;
+  // border: 1px solid black;
+  display: inline-block;
+  margin-left: auto;
+  left: 220px;
+  bottom: 607px;
+  width: 300px;
+  height: 45px;
+
+}
+
+
+.upload-flyer {
+  position: fixed;
+  // border: 1px solid black;
+  // height: 85%;
+  width: 120px;
+  // left: 940px;
+  // bottom: 0px;
+  display: inline-block;
+  margin-left: auto;
+  left: 715px;
+  bottom: 610px;
+
+}
 .change-password {
   position: relative;
   // border: 1px solid black;

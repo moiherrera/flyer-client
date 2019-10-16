@@ -3,12 +3,12 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   store.token = data.user.Token
-  $('#sign-up').text('Successful sign up!')
+  $('.sign-up-header').text('Successful sign up!')
   $('form').trigger('reset')
 }
 
 const signUpFailure = function () {
-  $('#message').text('Unsuccessful sign up!')
+  $('.sign-up-header').text('Unsuccessful sign up!')
   $('form').trigger('reset')
 }
 
@@ -18,12 +18,15 @@ const signInSuccess = function (data) {
   $('.sign-in').hide()
   $('.change-password').show()
   $('.sign-out').show()
+  $('.upload-flyer').show()
   $('#signInModal').modal('hide')
+  $('.message-box').text('Successfully Signed In')
   $('form').trigger('reset')
 }
 
 const signInFailure = function (data) {
   $('form').trigger('reset')
+  $('.sign-in-header').text('Failed to Sign In')
 }
 
 const signOutSuccess = function () {
@@ -33,13 +36,17 @@ const signOutSuccess = function () {
   $('.sign-out').hide()
   $('.sign-up').show()
   $('.sign-in').show()
+  $('.upload-flyer').show()
+  $('.message-box').text('Successfully Signed Out')
 }
 
 const changePasswordSuccess = function () {
+  $('.change-password-header').text('Successfully Changed Password')
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
+  $('.change-password-header').text('Failed to Change Password')
   $('form').trigger('reset')
 }
 
