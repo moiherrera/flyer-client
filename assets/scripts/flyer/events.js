@@ -8,7 +8,6 @@ const onCreateFlyer = event => {
   event.preventDefault()
   const form = event.target
   const formData = getFormFields(form)
-  console.log(formData)
   api.create(formData)
     .then(ui.onCreateSuccess)
     .then(() => onGetFlyers(event))
@@ -24,7 +23,6 @@ const onGetFlyers = function () {
 const onStoreFlyerID = function (event) {
   event.preventDefault()
   store.flyerid = event.target.getAttribute('data-id')
-  console.log(store.flyerid)
 }
 
 const onUpdateFlyer = function (event) {

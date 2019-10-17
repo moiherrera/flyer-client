@@ -7,7 +7,6 @@ const authCheckUpdate = function (owner) {
   if (store.email === undefined) {
     return false
   } else if (owner.email === store.email) {
-    console.log('it came through')
     return true
     // otherwise no buttons for you
   } else {

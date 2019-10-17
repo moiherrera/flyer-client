@@ -35,7 +35,6 @@ const onChangePassword = function (event) {
 const onSignOut = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   api.signOut(data)
     .then(ui.signOutSuccess)
     .then(flyerEvents.onGetFlyers)

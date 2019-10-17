@@ -13,7 +13,6 @@ const onCreateFailure = (formData) => {
 
 const onIndexSuccess = (data) => {
   const showFlyersHtml = showFlyersTemplate({flyers: data.flyers})
-  console.log(showFlyersHtml)
   $('#uploadFlyerModal').modal('hide')
   $('.all-flyers').html(showFlyersHtml)
   $('.all-flyers').show()
