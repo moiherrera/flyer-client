@@ -15,9 +15,8 @@ const onCreateFlyer = event => {
     .catch(ui.onCreateFailure)
 }
 
-const onGetFlyers = function (event) {
-  event.preventDefault()
-  api.index(event)
+const onGetFlyers = function () {
+  api.index()
     .then(ui.onIndexSuccess)
     .catch(ui.onIndexFailure)
 }

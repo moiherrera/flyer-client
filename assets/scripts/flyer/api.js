@@ -6,10 +6,10 @@ const index = function () {
   return $.ajax({
     url: config.apiUrl + '/flyers',
     method: 'GET',
-    contentType: 'application/json',
-    headers: {
-      Authorization: `Token token=${store.user.token}`
-    }
+    contentType: 'application/json'
+    // headers: {
+    //   Authorization: `Token token=${store.user.token}`
+    // }
   })
 }
 

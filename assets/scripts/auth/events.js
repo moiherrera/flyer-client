@@ -1,6 +1,8 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const flyerEvents = require('./../flyer/events')
+const store = require('./../store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -15,8 +17,10 @@ const onSignIn = function (event) {
   // sign in is successful
   event.preventDefault()
   const data = getFormFields(event.target)
+  store.email = data.credentials.email
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(flyerEvents.onGetFlyers)
     .catch(ui.signInFailure)
 }
 
@@ -34,6 +38,7 @@ const onSignOut = function (event) {
   console.log(data)
   api.signOut(data)
     .then(ui.signOutSuccess)
+    .then(flyerEvents.onGetFlyers)
     .catch(ui.signOutFailure)
 }
 

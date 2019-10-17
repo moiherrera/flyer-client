@@ -14,6 +14,8 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   store.user = data.user
+  store.user.email = data.user.email
+  store.user._id = data.user._id
   $('.sign-up').hide()
   $('.sign-in').hide()
   $('.change-password').show()
@@ -31,20 +33,20 @@ const signInFailure = function (data) {
 
 const signOutSuccess = function () {
   store.user = null
+  store.email = undefined
   $('form').trigger('reset')
   $('.change-password').hide()
   $('.sign-out').hide()
   $('.sign-up').show()
   $('.sign-in').show()
-  $('.upload-flyer').show()
   $('.message-box').text('Successfully Signed Out')
-  $('.all-flyers').hide()
   $('.upload-flyer').hide()
 }
 
 const changePasswordSuccess = function () {
   $('.change-password-header').text('Successfully Changed Password')
   $('form').trigger('reset')
+  $('.message-box').text('')
 }
 
 const changePasswordFailure = function () {

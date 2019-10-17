@@ -10,6 +10,7 @@ const signUp = function (formData) {
     data: formData
   })
 }
+
 const signIn = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-in',

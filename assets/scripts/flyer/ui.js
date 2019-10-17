@@ -1,10 +1,9 @@
 'use strict'
+// const store = require('../store')
 const showFlyersTemplate = require('../templates/flyers.handlebars')
 
 const onCreateSuccess = (formData) => {
-  console.log('hello')
   $('.message-box').text('Success Flyer Created.')
-  console.log('hello')
   $('form').trigger('reset')
 }
 
@@ -14,13 +13,10 @@ const onCreateFailure = (formData) => {
 
 const onIndexSuccess = (data) => {
   const showFlyersHtml = showFlyersTemplate({flyers: data.flyers})
-  console.log(data)
-  console.log(data.flyers)
   console.log(showFlyersHtml)
   $('#uploadFlyerModal').modal('hide')
   $('.all-flyers').html(showFlyersHtml)
   $('.all-flyers').show()
-  $('.message-box').text('Look through events in your area.')
 }
 
 const onIndexFailure = function () {

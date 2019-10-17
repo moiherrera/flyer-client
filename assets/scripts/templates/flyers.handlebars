@@ -1,10 +1,13 @@
-
     {{#each flyers as |flyer|}}
     <div class="flyerImages">
     <img src="{{flyer.name}}"/>
-        {{#if flyer.owner}}
+        {{#if (auth-check-delete flyer.owner)}}
         <button class="delete-flyer btn btn-danger" data-id="{{flyer._id}}">Delete </button>
+
+        {{/if}}
+        {{#if (auth-check-update flyer.owner)}}
         <button class="edit-flyer btn btn-basic" data-id="{{flyer._id}}" data-toggle="modal" data-target="#updateFlyerModal">Update</button>
+
         {{/if}}
     </div>
     {{/each}}
