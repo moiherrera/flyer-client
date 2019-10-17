@@ -72,7 +72,7 @@ As a user, I expect to be able to log out.
 Link to WireFrames: https://docs.google.com/document/d/1jq8GdOTGVQFqBFCDCPHij3pEt9cZ4XVZhmmZwr1AhpM/edit?usp=sharing
 
 
-![Flyer Web Application](http://home/herreram/sei/projects/flyer-client/public/Flyer.png)
+![Flyer Web Application](https://i.imgur.com/Tws2Tbm.png?1)
 
 
 Set Up:
