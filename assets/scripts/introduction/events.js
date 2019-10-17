@@ -1,7 +1,6 @@
 'use strict'
 import $ from 'jquery'
 const flyerEvents = require('./../flyer/events')
-// const store = require('./../store')
 
 const onClickFirst = function () {
   $('.message-container').hide()
