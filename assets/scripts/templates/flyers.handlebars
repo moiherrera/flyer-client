@@ -1,4 +1,4 @@
-    {{#each flyers as |flyer|}}
+  {{#each flyers as |flyer|}}
     <div class="flyerImages">
     <img src="{{flyer.name}}"/>
         {{#if (auth-check-delete flyer.owner)}}
@@ -9,5 +9,5 @@
         <button class="edit-flyer btn btn-info" data-id="{{flyer._id}}" data-toggle="modal" data-target="#updateFlyerModal">Update</button>
 
         {{/if}}
-    </div>
+      </div>
     {{/each}}

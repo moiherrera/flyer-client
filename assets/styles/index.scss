@@ -8,6 +8,8 @@ body {
 .upper-bar {
   // border: 1px dotted black;
   position: fixed;
+  display: flex;
+  flex-direction: row;
   width:100vw;
   height: 50px;
   background-color: rgba(180, 159, 142, 1);
@@ -19,8 +21,6 @@ body {
   // border: 1px solid black;
   height: 90%;
   width: 7%;
-  left: 13px;
-  bottom: -3px;
 }
 
 .sign-in {
@@ -28,28 +28,27 @@ body {
   // border: 1px solid black;
   height: 90%;
   width: 8%;
-  left: 101px;
-
-  bottom: 42px;
 }
 
 .message-box {
-  position: fixed;
+  position: relative;
   // border: 1px solid black;
   display: inline-block;
-  margin-left: auto;
-  left: 220px;
   width: 300px;
   height: 35px;
   color: white;
-  bottom: 615px;
+  bottom: -5px;
 
 }
 
 .main-content {
   position: relative;
   bottom: -80px;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
 }
+
 .upload-flyer {
   position: relative;
   // border: 1px solid black;
@@ -60,20 +59,22 @@ body {
   display: inline-block;
   margin-left: auto;
   left: 500px;
-
+  bottom: 10px;
 }
 
 .all-flyers {
   padding: 0px;
   width: 100vw;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
+  text-align: center;
+  flex-direction: row;
 }
 
 .flyerImages {
   position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin: auto;
   width: 400px;
   height: 500px;
@@ -91,6 +92,7 @@ img {
   display: inline-block;
   margin-left: auto;
   left: 510px;
+  bottom: 10px;
 
 }
 
@@ -99,20 +101,14 @@ img {
   display: inline-block;
   margin-right: auto;
   left: 570px;
-  bottom: -5px;
+  bottom: 4px;
 }
 
 .message-container {
   background-color: rgba(180, 159, 142, .8);
   position: relative;
-  // border: 1px solid black;
-  width: 21%;
-  height: 200px;
-  left: 500px;
-  text-align: center;
-  word-wrap: break-word;
-  bottom: -150px;
-  justify-content:center;
+  width: 100vw;
+  height: 100vh;
 
 }
 
@@ -147,12 +143,11 @@ p {
 }
 
 .signed-in-box {
-  position: relative;
-  width: 30%;
-  left: 290px;
+  display: flex;
+  align-self: flex-end;
+  justify-content: space-evenly;
 }
 
 #sign-out {
   position: relative;
-  bottom: -5px;
 }
