@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Flyer</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+        <div class="message-container">
+          <h2 class="intro-title"> Flyer </h2>
+          <p class="first-message">
+            Greetings! Flyer is a tool to help you find events in your area by collecting flyers from individuals and organization in your locale!   If you'd like to upload a flyer yourself for an event that you are planning, remember to sign up for an account! Otherwise, enjoy! <br> <br>   <span class="next"> Click Here to Enter &#10093; </span>
+          </p>
+        </div>
+      <div class="upper-bar">
+        <div class="sign-up">
+          <a data-toggle="modal" id="sign-up-modal" href="#signUpModal" class="">
+          <p> Sign Up </p>
+          </a>
+          <!-- <form id='sign-up'>
+            <fieldset>
+                <input type="text" name="credentials[email]" placeholder="Email">
+                <input type="password" name="credentials[password]" placeholder="Password">
+                <input type='password' name="credentials[password_confirmation]" placeholder="Confirm Password">
+                <input type="submit" value="Sign up!">
+            </fieldset>
+          </form> -->
+        </div>
+        <div class="sign-in">
+          <a data-toggle="modal" id="sign-in-modal" href="#signInModal" class="">
+          <p> Sign In </p>
+        </a>
+        </div>
+        <div class="message-box">
+        </div>
+        <div class="signed-in-box">
+        <div class="upload-flyer">
+          <a data-toggle="modal" id="upload-flyer-modal" href="#uploadFlyerModal" class="">
+          <p> Upload Flyer </p>
+          </a>
+        </div>
+        <div class="change-password">
+          <a data-toggle="modal" id="change-password-modal" href="#changePasswordModal" class="">
+          <p> Change Password </p>
+          </a>
+        </div>
+        <div class="sign-out">
+          <form id='sign-out'>
+              <fieldset>
+                  <input type="submit" value="Sign Out!">
+              </fieldset>
+          </form>
+        </div>
+      </div>
+      </div>
+      <div class="main-content">
+        <div class="all-flyers">
+
+        </div>
+      </div>
+
+
+      <!-- Authentication Modals -->
+      <div id="signUpModal" class="modal fade">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <div class="modal-header sign-up-header">
+                  </div>
+                  <div class="modal-body">
+                          <form id='sign-up' class='border'>
+                            <fieldset>
+                                <legend>Sign up!</legend>
+                                <input type="text" name="credentials[email]" placeholder="Email">
+                                <input type="password" name="credentials[password]" placeholder="Password">
+                                <input type='password' name="credentials[password_confirmation]" placeholder="Confirm Password">
+                                <input type="submit" value="Sign up!">
+                            </fieldset>
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+        </div>
+        <div id="signInModal" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="modal-header sign-in-header">
+                    </div>
+                    <div class="modal-body">
+                      <form id='sign-in' class='border'>
+                          <fieldset>
+                              <legend>Sign In</legend>
+                              <input type="text" name="credentials[email]" placeholder="Email">
+                              <input type="password" name="credentials[password]" placeholder="Password">
+                              <input type="submit" value="Sign in!">
+                          </fieldset>
+                      </form>
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div id="changePasswordModal" class="modal fade">
+              <div class="modal-dialog modal-dialog-centered modal-lg">
+                  <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <div class="modal-header change-password-header">
+                      </div>
+                      <div class="modal-body">
+                        <form id='change-password' class='border'>
+                          <fieldset>
+                              <legend>Change Password</legend>
+                              <input type="password" name="passwords[old]" placeholder="Current Password">
+                              <input type="password" name="passwords[new]" placeholder="New Password">
+                              <input type='submit' value='Change Password!'>
+                          </fieldset>
+                        </form>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div id="uploadFlyerModal" class="modal fade">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-header change-password-header">
+                        </div>
+                        <div class="modal-body">
+                          <form class="form1" action="" id='upload-flyer'>
+                              <label for="name" class="input_name">Flyer Link</label>
+                              <input name= "flyer[name]" id="input_Name" type="text">
+                              <button>Upload Flyer</button>
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+              <div id="updateFlyerModal" class="modal fade">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                      <div class="modal-content">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <div class="modal-header update-flyer-header">
+                          </div>
+                          <div class="modal-body">
+                            <form id='update-flyer'>
+                              <fieldset>
+                                  <legend>Update Flyer</legend>
+                                  <input type="name" name="flyer[name]" placeholder="Current Link">
+                                  <input type='submit' value='Update link'>
+                              </fieldset>
+                            </form>
+                            <!-- <form class="form1" action="" id='update-flyer'>
+                                <label for="name" class="input_name">Flyer Link</label>
+                                <input name= "flyer[name]" type="text">
+                                <input type='submit' value='Update Flyer'>
+                            </form> -->
+                          </div>
+                        </div>
+                    </div>
+                </div>
+    </body>
+</html>
