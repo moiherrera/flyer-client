@@ -44,9 +44,8 @@ body {
 .main-content {
   position: relative;
   bottom: -80px;
-  overflow: auto;
+  width: 100%;
   white-space: nowrap;
-  display: flex;
 }
 
 .upload-flyer {
@@ -67,22 +66,22 @@ body {
   width: 100vw;
   text-align: center;
   display: inline-block;
-  text-align: center;
+  justify-content: space-evenly;
   flex-direction: row;
+  text-align: center;
 }
 
 .flyerImages {
   position: relative;
-  display: flex;
-  flex-direction: column;
   margin: auto;
-  width: 400px;
+  width: 100vw;
   height: 500px;
-  left: 100px;
-  padding: 70px;
+  display: inline-block;
+  flex-direction: column;
 }
 
 img {
+  // padding: 50%;
   max-height: 100%;
   max-width: 100%;
 }
@@ -147,7 +146,21 @@ p {
   align-self: flex-end;
   justify-content: space-evenly;
 }
+//
+// .flyer-Image {
+//   display: flex;
+//   flex-direction: column;
+// }
 
+// .delete-flyer {
+//   position: relative;
+//   left: -200px;
+// }
+//
+// .edit-flyer {
+//   position: relative;
+//   left: -200px;
+// }
 #sign-out {
   position: relative;
 }
