@@ -4,6 +4,7 @@ const flyerEvents = require('./../flyer/events')
 
 const onClickFirst = function () {
   $('.message-container').hide()
+  $('.main-content').show()
   $('.upper-bar').show()
   $('.change-password').hide()
   $('.sign-out').hide()
